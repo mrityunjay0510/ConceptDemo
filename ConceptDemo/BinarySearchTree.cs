@@ -148,5 +148,36 @@ namespace ConceptDemo
             //    Console.WriteLine(item);
             //}
         }
+
+        public void DFS()
+        {
+
+            Stack<Node> stack = new Stack<Node>();
+            List<int> travarsePath = new List<int>();
+            if (root == null)
+            {
+                Console.WriteLine("Tree is empty");
+                return;
+            }
+
+            stack.Push(root);
+           
+            Console.Write("********************");
+            while (stack.Count > 0)
+            {
+                Node x = stack.Pop();
+                if (x.Right != null) {
+                    stack.Push(x.Right);
+                }
+
+                if (x.Left != null)
+                {
+                    stack.Push(x.Left);
+                }
+
+                Console.Write(" " + x.Item);
+                
+            }
+        }
     }
 }

@@ -6,6 +6,7 @@ namespace ConceptDemo
     {
         static void Main(string[] args)
         {
+            #region BinaryTree
             BinarySearchTree bt = new BinarySearchTree();
             bt.InsertNode(25);
             bt.InsertNode(15);
@@ -27,6 +28,10 @@ namespace ConceptDemo
 
             bt.InOrder();
             bt.GetAllNodeInTreeLevel();
+
+            bt.DFS();
+            #endregion
+
             Console.ReadKey();
         }
     }
